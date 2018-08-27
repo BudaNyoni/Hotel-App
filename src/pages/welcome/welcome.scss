@@ -51,14 +51,21 @@ button{
     text-align: center;
     top: 50%;
 }
+.tit{
+    width: 100%;
+    position: absolute;
+    color: wheat;
+    text-align: center;
+    top: 50%;
+}
 .T{
  font-size: 30px;
  font-weight: bold; 
  font-family: 'Original Surfer', cursive;
 }
-img{
-    // background: linear-gradient(rgba(0,0,0,0.6));
-}
+// img{
+//     // background: linear-gradient(rgba(0,0,0,0.6));
+// }
 ion-card.card{
     background-image: linear-gradient(rgba(0, 0, 0, 0.836));
     // background-image: url('../../assets/081f3c8460625915dc34edc705b82bba.jpg');
@@ -69,13 +76,18 @@ ion-card.card{
     border-radius: 12px;
 
 }
-ion-card.pic{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.836));
+// ion-card.pic{
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.836));
 
-}
+// }
 .overlay{
     position:absolute;
     color: aqua;
     height: 100px;
+}
+.O{
+    font-size: 30px;
+    font-weight: bold; 
+    font-family: 'Original Surfer', cursive;
 }
 }
