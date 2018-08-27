@@ -1,0 +1,67 @@
+
+<ion-content id = "main" class="animated  zoomIn delay-2s">
+  <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <div class="flb">
+      <div class="Aligner-item Aligner-item--top"></div>
+      <div class="log"  ><img class="logo" src="../../assets/logos/eclipse.svg">
+        <h1 class="head">Hotel Ville</h1></div>
+      <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
+  </div>
+  
+
+<div id="background">
+  
+<ion-header>
+  <ion-navbar color = "color" >
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header> 
+<br>
+<br>
+<!-- <div><h1>Hotel Ville</h1></div> -->
+<!-- <div id ="menu" align = "center">
+     
+  <div class="ball">
+   
+  <img src="../../assets/logos/eclipse.svg" >
+</div>
+</div> -->
+</div>
+<br>
+<h1>Hotel Ville</h1>
+<br>
+<br>
+
+
+<ion-card>
+<ion-card-header>
+ <h2>Log-In</h2> 
+</ion-card-header>
+
+<ion-card-content> 
+  <ion-list>
+  <ion-item>
+    <ion-label ><ion-icon name="mail" class="i"></ion-icon>E-mail</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label ><ion-icon name="lock" class="i"></ion-icon>Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+</ion-list>
+</ion-card-content>
+
+<div class="butt">
+ <button ion-button clear color = "color2" (click) = "NextPage()" >Log-In</button>
+</div>
+<br>
+
+</ion-card>
+<div>
+ <p>Not Registerd? Please <a>SignUp</a> for an Account </p>
+</div>
+</ion-content>
