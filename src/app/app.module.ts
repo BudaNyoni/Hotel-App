@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SecondPage } from '../pages/second/second';
 import { WelcomePage } from "../pages/welcome/welcome";
+import {ViewPage} from '../pages/view/view';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SecondPage,
-    WelcomePage
+    WelcomePage,
+    ViewPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { WelcomePage } from "../pages/welcome/welcome";
     MyApp,
     HomePage,
     SecondPage,
-    WelcomePage
+    WelcomePage,
+    ViewPage
   ],
   providers: [
     StatusBar,

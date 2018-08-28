@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ViewPage } from '../view/view';
-import { HomePage } from '../home/home';
 
 /**
- * Generated class for the WelcomePage page.
+ * Generated class for the ViewPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,24 +10,16 @@ import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
-  selector: 'page-welcome',
-  templateUrl: 'welcome.html',
+  selector: 'page-view',
+  templateUrl: 'view.html',
 })
-export class WelcomePage {
+export class ViewPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WelcomePage');
+    console.log('ionViewDidLoad ViewPage');
   }
 
-
-  View(){
-    this.navCtrl.push(ViewPage);
-  }
-  
-Back(){
-  this.navCtrl.push(HomePage)
-}
 }

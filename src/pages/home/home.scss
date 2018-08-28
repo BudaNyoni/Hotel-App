@@ -20,8 +20,9 @@ page-home {
     // background-image: url('../../assets/4728ba7b526aaa860cfb1b912292fa86.jpg');
     // background-size: cover;
      box-shadow:2px 2px 4px 2px ;
+     opacity: 0.90;
      border-radius: 15px;
-
+   
    }
 .logo{
   background-color: rgb(172, 120, 25);
@@ -69,13 +70,13 @@ page-home {
         animation-delay: 6s;
       }
 #main{
-  background: linear-gradient(rgba(0,0,0,0.6)), url('../../assets/3f6b0af2345776f5f225a3f030e88726.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.432)), url('../../assets/3f6b0af2345776f5f225a3f030e88726.jpg');
   background-size: cover;
 
 }
       .i{
           margin-right: 15px;
-          padding: 10px;
+          // padding: 10px;
         // margin: 30px;
         // padding: 0;
       }
@@ -88,6 +89,7 @@ page-home {
           border-radius: 50px;
       }
       .ball{
+        
           // margin-top: 24%;
           position: relative ;
           top: 35vw;
@@ -102,6 +104,9 @@ page-home {
       .item{
         margin-bottom: 20px;
         border-radius: 20px;
+        // font-family: 'Original Surfer', cursive;
+        font-family: 'Courgette', cursive;
+        // font-family: 'Pacifico', cursive;
         // background-color: rgba(165, 109, 4, 0.747);
           box-shadow: 2px 2px 4px black;
                overflow:visible;
@@ -110,12 +115,17 @@ page-home {
       p{
         color: rgb(172, 120, 25);
         text-align: center;
+        // font-family: 'Original Surfer', cursive;
+        // font-family: 'Pacifico', cursive;
+        font-family: 'Courgette', cursive;
       }
       a{
         text-decoration-line: underline;
       }
     .butt{
       text-align: center;
+      font-family: 'Original Surfer', cursive;
+        font-family: 'Pacifico', cursive;
     }
     button{
       box-shadow: 2px 2px 4px 2px ;
@@ -123,6 +133,8 @@ page-home {
     }
       h2{
         text-align: center;
+        font-family: 'Original Surfer', cursive;
+        // font-family: 'Pacifico', cursive;
         border-top-left-radius: 40%;
         border-bottom-right-radius: 40%;
         border-top-right-radius: 5px;
@@ -132,8 +144,7 @@ page-home {
         padding: 10px;
         margin-left: 30px;
         margin-right: 50px;
-
-        box-shadow: 2px 2px 4px black;
+        // box-shadow: 2px 2px 4px black;
 
       }
 .menu{
@@ -150,7 +161,8 @@ h1{
   // position: relative ;
   top:20vw;
   font-family: 'Original Surfer', cursive;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 3px 3px 6px black;
+  text-shadow: 3px 3px 6px ;
 
 }   
 }
