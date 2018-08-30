@@ -1,5 +1,4 @@
-page-view {
-
+page-view-rooms {
     .background{
         background: linear-gradient(rgba(0,0,0,0.6)), url('../../assets/3f6b0af2345776f5f225a3f030e88726.jpg');
         background-size: cover;  
@@ -21,10 +20,6 @@ page-view {
         flex-direction: column;
         text-align: center;
     }
-    ion-icon.icon{
-        color: rgb(236, 160, 19);
-    }
-    
     .nav{
         font-family: 'Original Surfer', cursive;
         font-family: 'Courgette', cursive;  
@@ -32,8 +27,12 @@ page-view {
     h2{
         font-family: 'Original Surfer', cursive;
         font-family: 'Courgette', cursive;
-        color: rgb(133, 93, 18);
+
         text-shadow: 2px 2px 4px wheat;
+    }
+    ion-icon.icon{
+        // color: rgb(133, 93, 18);
+        color: rgb(236, 160, 19);
     }
     h1{
         font-family: 'Original Surfer', cursive;

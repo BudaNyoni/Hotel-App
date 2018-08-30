@@ -6,28 +6,26 @@
 -->
 <ion-header>
 
-  <ion-navbar color= "color" >
-    <ion-title>View</ion-title>
+  <ion-navbar color= "color" class="nav" >
+    <ion-title><h1> View</h1></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content class="background">
+<ion-content class="background" >
 
   <ion-card>
     <!-- <ion-card-title>
       View
     </ion-card-title> -->
-<h1>{{name}}</h1>
 
+ <img src="{{pic}}" >
     <ion-card-content>
       <ion-list>
-      
-      <img src="{{pic}}" >
-
+      <h1>{{name}}</h1> 
       <h2>{{description}}</h2>
-      <p>{{price}}</p>
+      <!-- <p>{{price}}</p> -->
 
     </ion-list>
     </ion-card-content>

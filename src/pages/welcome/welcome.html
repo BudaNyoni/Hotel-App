@@ -38,173 +38,53 @@
 
   <ion-list pager  *ngSwitchCase="'rooms'" class="animated slideInUp delay-2s">
      <!-- <ion-slides page> -->
-       <ion-item class="IT">
+       <ion-item class="IT" *ngFor = "let y of Arr;let i = index">
          <ion-thumbnail item-start class="thumb">
-          <img id="pics" src="../../assets/8e529976583ca4e173b4154380418c59.jpg" class="image"  >
-          </ion-thumbnail>            
-                 <h2>Port Elizebeth couple suite</h2>
-                 <p>R2000 for 4 nights</p>
-                 <br>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
+          <img id="pics" src="{{y.pic2}}" class="animated slideInLeft delay-2s"  >
+          </ion-thumbnail>  
+          <div  class="animated slideInRight delay-2s">         
+                 <h2>{{y.name}} </h2>
+                 <p>R {{y.price}}</p>
+          
+                 <ion-icon name="star" class="i"></ion-icon>
+                 <ion-icon name="star" class="i"></ion-icon>
+                 <ion-icon name="star" class="i"></ion-icon>
+                 <ion-icon name="star" class="i"></ion-icon>
+                 <ion-icon name="star" class="i"></ion-icon>
+                </div> 
+                
+                 <button ion-button clear color = "color2" (click)="Rooms(i)"><h2 class="T2" item-end>View</h2></button>
           </ion-item>
          
-          <ion-item class="IT">
-              <ion-thumbnail item-start class="thumb">
-               <img id="pics" src="../../assets/Top30PlacesInSouthAfrica_016.jpg" class="image"  >
-               </ion-thumbnail>          
-                  <h2>South Safari suite</h2>
-                  <p>R1856 for 3 nights</p>
-                  <br>
-                  
-                  <ion-icon name="star"></ion-icon>
-                  <ion-icon name="star"></ion-icon>
-                 
-               </ion-item>
-
-               <ion-item class="IT">
-                  <ion-thumbnail item-start class="thumb">
-                   <img id="pics" src="../../assets/ff6a6e1ed06f447f834ba7ae04928838.jpg" class="image"  >
-                   </ion-thumbnail>          
-                      <h2>Price:</h2>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    
-                   </ion-item>
-
-                   <ion-item class="IT">
-                      <ion-thumbnail item-start class="thumb">
-                       <img id="pics" src="../../assets/ff6a6e1ed06f447f834ba7ae04928838.jpg" class="image"  >
-                       </ion-thumbnail>          
-                          <h2>Price:</h2>
-                          <ion-icon name="star"></ion-icon>
-                          
-                          <ion-icon name="star"></ion-icon>    
-                       </ion-item>
-
-                       <ion-item class="IT">
-                          <ion-thumbnail item-start class="thumb">
-                           <img id="pics" src="../../assets/ff6a6e1ed06f447f834ba7ae04928838.jpg" class="image"  >
-                           </ion-thumbnail>          
-                              <h2>Price:</h2>
-                             
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>
-                              <ion-icon name="star"></ion-icon>    
-                           </ion-item>
+        
 </ion-list>
   <!-- </ion-list> -->
 
-  <ion-slides pager *ngSwitchCase="'hotels'" class="animated slideInUp delay-2s">
+  <ion-slides pager *ngSwitchCase="'hotels'" class="animated slideInLeft delay-2s">
     <ion-slide *ngFor = "let H of Arr;let i = index ">
-     <ion-card class="res"  >
+     <ion-card class="res" >
         <div class="overlay"></div>  
-          <img src="{{H.pic}}" class="pic">
-          <div class="tit">
+          <img src="{{H.pic}}" class="pice">
+          <div id="tit"class="animated slideInRight delay-2s">
             <ion-item class="tem">
-                <div><h2 class="T">{{H.name}}</h2></div> 
-                <br> 
-                <div>
-                 <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
+                
+                <div class="animated slideInDown delay-2s"><h2 class="T">{{H.name}}</h2></div> 
+               
+                <div class="animated slideInUp delay-2s">
+                 <ion-icon name="star" class="i"></ion-icon>
+                <ion-icon name="star"  class="i"></ion-icon>
+                <ion-icon name="star"  class="i"></ion-icon>
+                <ion-icon name="star"  class="i"></ion-icon>
               </div>
-                <button ion-button clear color = "color2" (click)="View()"><h2 class="T2">View</h2></button> 
+              <br>
+                <button ion-button clear color = "color2" (click)="View(i)"  class="animated slideInUp delay-3s"><h2 class="T2">View</h2></button> 
             </ion-item>
           </div>
        
      </ion-card>
     </ion-slide>
   </ion-slides>
-  <!-- <ion-slide>
-     <ion-card class="res">
-        <img src="{{i.pic}}" class="pic">
-        <div class="tit">
-          <ion-item class="tem">
-              <div><h2 class="T">{{i.name}}</h2></div>
-              <br>
-              <div>
-                  <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-                 <ion-icon name="star"></ion-icon>
-               </div>
-             <button ion-button clear color = "color2" (click)="View()"><h2 class="T2">View</h2></button>
-             </ion-item>
-        </div>
-         
-     </ion-card>
-  </ion-slide>
-
-  <ion-slide>
-       <ion-card>
-      <img src="../../assets/081f3c8460625915dc34edc705b82bba.jpg" class="pic">
-      <div class="tit">
-        
-          <ion-item class="tem">
-        <h2 class="T">Ruby</h2>
-        <br>
-        <div>
-            <ion-icon name="star"></ion-icon>
-           <ion-icon name="star"></ion-icon>
-           <ion-icon name="star"></ion-icon>
-           <ion-icon name="star"></ion-icon>
-         </div>
-        <button ion-button clear color = "color2" (click)="View()"><h2 class="T2">View</h2></button> 
-
-          </ion-item>
-       </div>
-       </ion-card>
-  </ion-slide>
-
-<ion-slide>
-<ion-card>
-       <img src="../../assets/ff6a6e1ed06f447f834ba7ae04928838.jpg" class="pic">
-           <div class="tit">
-              <ion-item class="tem">
-             <div><h2 class="T">Nyoni Hotels</h2></div>
-             <br> 
-             <div>
-                <ion-icon name="star"></ion-icon>
-               <ion-icon name="star"></ion-icon>
-               <ion-icon name="star"></ion-icon>
-               <ion-icon name="star"></ion-icon>
-             </div>
-             <button ion-button clear color = "color2" (click)="View()"><h2 class="T2">View</h2></button> 
-
-            </ion-item>
-            </div>
-</ion-card>
-    </ion-slide>
-
-    <ion-slide>
-        <ion-card>
-               <img src="../../assets/eceadacfdabeeacfb03fa5d51294784d.jpg" class="pic">
-                   <div class="tit">
-                      <ion-item class="tem">
-                     <div><h2 class="T">Table Bay Hotel</h2></div>
-                     <br>
-                     <div>
-                        <ion-icon name="star"></ion-icon>
-                       <ion-icon name="star"></ion-icon>
-                       <ion-icon name="star"></ion-icon>
-                       <ion-icon name="star"></ion-icon>
-                     </div> 
-                     <button ion-button clear color = "color2" (click)="View()"><h2 class="T2">View</h2></button> 
-        
-                    </ion-item>
-                    </div>
-        </ion-card>
-            </ion-slide>
-    <br>
-</ion-slides>
-<br> -->
+ 
 </div>
 
 

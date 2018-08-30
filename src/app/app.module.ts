@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
+import { ViewRoomsPage } from "../pages/view-rooms/view-rooms";
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SecondPage } from '../pages/second/second';
@@ -18,7 +18,8 @@ import { RegisterPage } from '../pages/register/register';
     SecondPage,
     WelcomePage,
     ViewPage,
-    RegisterPage
+    RegisterPage,
+    ViewRoomsPage
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,8 @@ import { RegisterPage } from '../pages/register/register';
     SecondPage,
     WelcomePage,
     ViewPage,
-    RegisterPage
+    RegisterPage,
+    ViewRoomsPage
   ],
   providers: [
     StatusBar,
