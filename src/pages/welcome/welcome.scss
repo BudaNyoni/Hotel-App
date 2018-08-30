@@ -57,6 +57,17 @@ ion-segment.segment{
     box-shadow: 2px 2px 4px;
     border-radius: 50px;
 }
+.pic{
+    height: 80vw;
+    width: 400px;
+}
+.IT{
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 4px;
+    width: 95%;
+    left: 3%;
+}
 
 .ball{
     background-color:rgb(133, 93, 18) ;
@@ -71,8 +82,16 @@ ion-segment.segment{
     text-align: center;
     opacity: 0.90;
 }
+#pics{
+    height: 100px;
+    width: 100px;
+    box-shadow: 2px 2px 4px black;
+    border: 12px;
+    // border-radius: 50px;
+}
 .tem {
-    padding: 30px;
+    padding: 20px;
+    // margin-top: 2px;
     background-color: rgba(0, 0, 0, 0.637);
     text-align: center;
     color: wheat;
@@ -95,9 +114,9 @@ h1{
     margin-right: 50px;
 
 }
-.image{
+img{
     // height: 120px;
-    width: 150px;
+    // width: 150px;
     // padding: 10px;
 
 }
@@ -129,7 +148,10 @@ button{
     position: absolute;
     color: wheat;
     text-align: center;
-    top: 50%;
+    top: 30%;
+}
+.list,.pager{
+    color: rgb(133, 93, 18);
 }
 .T{
  font-size: 30px;
@@ -144,7 +166,7 @@ font-family: 'Courgette', cursive;
 ion-card.card{
    
     // background-image: url('../../assets/081f3c8460625915dc34edc705b82bba.jpg');
-    background-size: cover;
+    background-size: contain;
     // background-repeat: no-repeat;
     position: relative;
     text-align: center;
@@ -160,9 +182,9 @@ ion-card.card{
 
 // }
 .overlay{
-    position:absolute;
-    color: aqua;
-    height: 100px;
+    // position:absolute;
+    // color: aqua;
+    // height: 100px;
 }
 .O{
     font-size: 30px;
@@ -170,7 +192,7 @@ ion-card.card{
     font-family: 'Original Surfer', cursive;
 }
 .res{
-height: 350px;
+// height: 350px;
 }
 
 }

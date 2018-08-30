@@ -16,7 +16,13 @@ import { HomePage } from '../home/home';
   templateUrl: 'welcome.html',
 })
 export class WelcomePage {
-
+  Arr = [
+    new Hotel('Montego bay Jamaica','Imagine discovering luxury beachfront accommodation in Port Elizabeth that is as friendly and welcoming as the city that it calls home','2000','../../assets/ee9ee05e4471beac86a1d07d545419de.jpg'),
+    new Hotel('African Safari','Imagine discovering luxury beachfront accommodation in Port Elizabeth that is as friendly and welcoming as the city that it calls home','2000','../../assets/98bd6c9bbcddd1b6d3050b3b5a7f52bf.jpg'),
+    new Hotel('Port Elizebeth couple suite','Imagine discovering luxury beachfront accommodation in Port Elizabeth that is as friendly and welcoming as the city that it calls home','2000','../../assets/8e529976583ca4e173b4154380418c59.jpg'),
+  //   new Hotel('Port Elizebeth couple suite','Imagine discovering luxury beachfront accommodation in Port Elizabeth that is as friendly and welcoming as the city that it calls home','2000','../../assets/8e529976583ca4e173b4154380418c59.jpg'),
+  //   new Hotel('Port Elizebeth couple suite','Imagine discovering luxury beachfront accommodation in Port Elizabeth that is as friendly and welcoming as the city that it calls home','2000','../../assets/8e529976583ca4e173b4154380418c59.jpg')
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -26,10 +32,26 @@ export class WelcomePage {
 
 
   View(){
+    // this.navCtrl.push(ViewPage , {obj:i});
     this.navCtrl.push(ViewPage);
   }
   
 Back(){
   this.navCtrl.push(HomePage)
 }
+}
+
+export class Hotel{
+  name;
+  descriptiopn;
+  price;
+  pic;
+
+
+  constructor(name,description,pic,price){
+    this.name = name;
+    this.descriptiopn = description;
+    this.pic = pic;
+    this.price = price
+  }
 }
