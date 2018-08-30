@@ -123,6 +123,9 @@ img{
     // padding: 10px;
 
 }
+#con{
+    margin-left: 15px;
+}
 // .overlay{
   
 //     z-index: 0;
@@ -133,7 +136,7 @@ img{
     
 // }
 .T2{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 button{
     border: none;
@@ -147,11 +150,13 @@ button{
     top: 50%;
 }
 #tit{
-    width: 100%;
+    width: 101%;
+    // padding: 10%;
     position: absolute;
+    // display: flex;
     color: wheat;
     text-align: center;
-    top: 30%;
+    top: 20%;
 }
 .list,.pager{
     color: rgb(236, 160, 19);
@@ -162,6 +167,7 @@ button{
 // font-family: 'Original Surfer', cursive;
 // font-family: 'Pacifico', cursive;
 font-family: 'Courgette', cursive;
+text-decoration: underline;
 }
 // img{
 //     // background: linear-gradient(rgba(0,0,0,0.6));

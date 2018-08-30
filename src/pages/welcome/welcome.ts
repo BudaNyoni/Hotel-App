@@ -47,7 +47,7 @@ export class WelcomePage {
   }
 
   Rooms(i){
-    this.navCtrl.push(ViewRoomsPage, {obj:i , jj:this.Arr})
+    this.navCtrl.push(ViewRoomsPage, {obj:i , jj:this.Arr});
   }
   // Sports(i){
  

@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { SecondPage } from '../pages/second/second';
 import { WelcomePage } from "../pages/welcome/welcome";
 import {ViewPage} from '../pages/view/view';
+import { BookingPage } from "../pages/booking/booking"; 
 import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RegisterPage } from '../pages/register/register';
     WelcomePage,
     ViewPage,
     RegisterPage,
-    ViewRoomsPage
+    ViewRoomsPage,
+    BookingPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { RegisterPage } from '../pages/register/register';
     WelcomePage,
     ViewPage,
     RegisterPage,
-    ViewRoomsPage
+    ViewRoomsPage,
+    BookingPage
   ],
   providers: [
     StatusBar,

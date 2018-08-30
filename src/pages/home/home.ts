@@ -68,6 +68,10 @@ alert(error)
 
   })
 }
+
+Reg(){
+  this.navCtrl.push(RegisterPage)
+}
 }
 
 
