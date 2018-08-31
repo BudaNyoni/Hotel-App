@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { WelcomePage } from '../welcome/welcome';
+import { BookingPage } from '../booking/booking';
 
 
 
@@ -43,6 +44,10 @@ export class ViewPage implements OnInit{
 // pic2=this.Arr[this.obj].pic2;
   // object;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  book(){
+    this.navCtrl.push(BookingPage);
   }
 
   ngOnInit() {

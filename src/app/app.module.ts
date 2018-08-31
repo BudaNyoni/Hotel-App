@@ -11,6 +11,8 @@ import { WelcomePage } from "../pages/welcome/welcome";
 import {ViewPage} from '../pages/view/view';
 import { BookingPage } from "../pages/booking/booking"; 
 import { RegisterPage } from '../pages/register/register';
+import { ConfirmPage } from '../pages/confirm/confirm';
+ConfirmPage
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { RegisterPage } from '../pages/register/register';
     ViewPage,
     RegisterPage,
     ViewRoomsPage,
-    BookingPage
+    BookingPage,
+    ConfirmPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { RegisterPage } from '../pages/register/register';
     ViewPage,
     RegisterPage,
     ViewRoomsPage,
-    BookingPage
+    BookingPage,
+    ConfirmPage
   ],
   providers: [
     StatusBar,

@@ -34,25 +34,46 @@
         <ion-card-content> 
           <ion-list>
           <ion-item>
-            <ion-label ><ion-icon name="mail" class="i"></ion-icon>E-mail:</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-label ><ion-icon name="mail" class="i"></ion-icon>Name</ion-label>
+            <ion-input type="text" [(ngModel)] = "name" ></ion-input>
           </ion-item>
         
           <ion-item>
-            <ion-label ><ion-icon name="lock" class="i"></ion-icon>Password:</ion-label>
-            <ion-input type="password"></ion-input>
+            <ion-label ><ion-icon name="lock" class="i"></ion-icon>Adults:</ion-label>
+            <ion-input type="text" [(ngModel)] = "adults" ></ion-input>
           </ion-item>
-        </ion-list>
-        </ion-card-content>
+     
+         
+            <ion-item>
+              <ion-label>Start Time</ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)] = "checkIn"></ion-datetime>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Start Time</ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)] = "checkOut"></ion-datetime>
+            </ion-item>
+      
+          <ion-item>
+            <ion-label ><ion-icon name="mail" class="i"></ion-icon>Children:</ion-label>
+            <ion-input type="text" [(ngModel)] = "children" ></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label ><ion-icon name="lock" class="i"></ion-icon>Rooms:</ion-label>
+            <ion-input type="text" [(ngModel)] = "rooms"></ion-input>
+          </ion-item>
+       
         
         <div class="butt">
-         <button ion-button clear color = "color2" (click) = "NextPage()" >Log-In</button>
+         <button ion-button clear color = "color2" (click) = "Add()" >Book</button>
         </div>
         <br>
-        
+          </ion-list>
+        </ion-card-content>
         </ion-card>
         <div>
-         <p>Not Registerd? Please <a (click) = "Reg()" >SignUp</a> for an Account </p>
+         <p>Not Registerd? Please <a (click) = "Add()" >SignUp</a> for an Account </p>
         </div>
         
 </ion-content>

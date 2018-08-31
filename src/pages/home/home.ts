@@ -53,21 +53,21 @@ console.log(user)
 }
 
 
-SignUp(user:Users){
-  firebase.auth.createUserWithEmailAndPassword(user.email,user.password).then(()=>{
-    const toast = this.toastCtrl.create({
-      message: 'User was added successfully',
-      duration: 3000
-    });
-    toast.present(); 
-    // this.navCtrl.push(RegisterPage);
-   } , 
-(error)=>{
-alert(error)
+// SignUp(user:Users){
+//   firebase.auth.createUserWithEmailAndPassword(user.email,user.password).then(()=>{
+//     const toast = this.toastCtrl.create({
+//       message: 'User was added successfully',
+//       duration: 3000
+//     });
+//     toast.present(); 
+//     // this.navCtrl.push(RegisterPage);
+//    } , 
+// (error)=>{
+// alert(error)
 
 
-  })
-}
+//   })
+// }
 
 Reg(){
   this.navCtrl.push(RegisterPage)

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { Users } from '../Class';
+declare var firebase
 /**
  * Generated class for the RegisterPage page.
  *
@@ -14,12 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  users = {} as Users;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-
+  SignUp(user:Users){
+    firebase.auth.createUserWithEmailAndPassword(user.email,user.password).then(()=>{
+    
+      // this.navCtrl.push(RegisterPage);
+     } , 
+  (error)=>{
+  alert(error)
+  
+  
+    })
+  }
 }
