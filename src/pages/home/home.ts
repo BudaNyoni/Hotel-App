@@ -4,6 +4,8 @@ import { SecondPage } from '../second/second';
 import {WelcomePage} from '../welcome/welcome';
 import { Users } from '../Class';
 import { RegisterPage } from '../register/register';
+import { ConfirmPage } from '../confirm/confirm';
+
 
 declare var firebase
 @Component({
@@ -33,6 +35,9 @@ NextPage(){
   this.navCtrl.push(WelcomePage)
 }
 
+confirmPage(){
+  this.navCtrl.push(ConfirmPage)
+}
 
 SignIn(user:Users){
 firebase.auth().signInWithEmailAndPassword(user.email,user.password).then(()=>{ ;

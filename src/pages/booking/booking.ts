@@ -55,6 +55,7 @@ rooms
          item3:checkOut[k].checkOut,
          item4:adults[k].adults,
          item5:children[k].children,
+         item6:rooms[k].rooms,
          key:k
        }
 
@@ -75,6 +76,7 @@ console.log(this.itemList)
     
      for (var i = 0; i < keys.length; i++){
        var k = keys[i];
+
       let obj = {
         name:bookingList[k].bookingList,
         checkIn:bookingList[k].bookingList,
@@ -100,20 +102,21 @@ console.log(this.itemList)
           }
 Addbookings(name,checkIn,checkOut,adults,children,rooms){
   this.itemref$ = firebase.database().ref('bookingList').push({
-    name,
-    checkIn,
-    checkOut,
-    adults,
-    children,
-    rooms
+    name:name,
+    checkIn:checkIn,
+    checkOut:checkOut,
+    adults:adults,
+    children:children,
+    rooms:rooms
   });
 }
 
     Add(){
   
+
     this.itemList = []
     this.Addbookings(this.name,this.checkIn,this.checkOut,this.adults,this.children,this.rooms)
-    this.navCtrl.push(ConfirmPage) ;
+    this.navCtrl.push(ConfirmPage);
     console.log(this.itemList);
   }
 }

@@ -14,16 +14,14 @@
 
 
 <ion-content >
-<ion-card *ngFor = 'let F of itemList; let i = index'>
-
-  <ion-card-content>
-    <h2>{{F.name}}</h2>
-    <h2>{{F.item2}}</h2>
-    <h2>{{F.item3}}</h2>
-    <h2>{{F.item4}}</h2>
-    <h2>{{F.item5}}</h2>
-    <!-- <h2>{{F.item2}}</h2> -->
-  </ion-card-content>
   
-</ion-card>
+    <ion-card *ngFor = "let P of itemList;let i = index">
+        <ion-card-content>
+          <h1>{{P.item1}}</h1>
+        </ion-card-content>
+      </ion-card>
+
+ 
+  
+
 </ion-content>
