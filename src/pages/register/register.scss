@@ -8,7 +8,8 @@ page-register {
     .item{
         margin-bottom: 20px;
         background-color: rgba(0, 0, 0, 0);
-        border-radius: 5px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 4px;
         color: whitesmoke;
     }
     h1{
@@ -53,7 +54,9 @@ page-register {
     .butt{
         text-align: center;
     }
-
+    .i{
+    margin-right: 15px;
+}
     ion-icon.icon{
         margin-right: 15px;
         color: rgb(172, 120, 25);

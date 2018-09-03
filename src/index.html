@@ -44,6 +44,11 @@
       messagingSenderId: "14337523306"
     };
     firebase.initializeApp(config);
+    ( document ).ready(function() {
+        console.log( "testing.." );
+        var user = firebase.auth().currentUser;
+        console.log(user);
+    });
   </script>
 </head>
 <body>

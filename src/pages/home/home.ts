@@ -22,7 +22,7 @@ secomndPage = SecondPage;
 
 
   constructor(public navCtrl: NavController,public alertCtrl:AlertController,public toastCtrl:ToastController) {
-
+    var user = firebase.auth().currentUser;
   }
 
 
@@ -31,7 +31,7 @@ ionViewDidLoad(){
   setTimeout(()=> this.splash = false , 3000);
 }
 
-NextPage(){
+signin(){
   this.navCtrl.push(WelcomePage)
 }
 
@@ -43,7 +43,7 @@ SignIn(user:Users){
 firebase.auth().signInWithEmailAndPassword(user.email,user.password).then(()=>{ ;
 const alert = this.alertCtrl.create({
   title: 'Sign In!',
-  subTitle: 'Succesfully Logged In',
+  subTitle: 'Succesfully Logged In ' + user.email,
   buttons: ['OK']
 });
 alert.present();
@@ -54,24 +54,24 @@ console.log(user)
 (error)=>{
   alert(error)
 
- })
+ });
 }
 
 
 // SignUp(user:Users){
-//   firebase.auth.createUserWithEmailAndPassword(user.email,user.password).then(()=>{
+//   firebase.auth().createUserWithEmailAndPassword(user.email,user.password).then(()=>{
 //     const toast = this.toastCtrl.create({
 //       message: 'User was added successfully',
 //       duration: 3000
 //     });
 //     toast.present(); 
-//     // this.navCtrl.push(RegisterPage);
+//     this.navCtrl.push(HomePage);
 //    } , 
 // (error)=>{
 // alert(error)
 
 
-//   })
+//   });
 // }
 
 Reg(){

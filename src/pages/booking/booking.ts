@@ -111,12 +111,17 @@ Addbookings(name,checkIn,checkOut,adults,children,rooms){
   });
 }
 
-    Add(){
+    Add(i){
   
 
     this.itemList = []
     this.Addbookings(this.name,this.checkIn,this.checkOut,this.adults,this.children,this.rooms)
+    // this.itemList.push(this.itemref$);
+    
+      // this.navCtrl.push(ConfirmPage, {obj:i , jj:this.itemList});
+    
     this.navCtrl.push(ConfirmPage);
+    // this.itemList.pop();
     console.log(this.itemList);
   }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BookingPage } from '../booking/booking';
 
 /**
  * Generated class for the ViewRoomsPage page.
@@ -30,5 +31,7 @@ export class ViewRoomsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ViewRoomsPage');
   }
-
+book(){
+  this.navCtrl.push(BookingPage)
+}
 }

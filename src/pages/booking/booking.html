@@ -20,41 +20,121 @@
     <div class="ball" align = "center">
       <br>
       <img class="logo" src="../../assets/logos/eclipse.svg" >
-     <h1 >Hotel Ville</h1>
+     <h1>Hotel Ville</h1>
     </div>
-    </div>
+<br>
+  <div align = "center">
+    <!-- <img class="log" src="../../assets/logos/eclipse.svg" > -->
+  
+  </div>
+  </div>
     </ion-header>
+<br>
 
 <ion-content class="background" >
+  <br>
+
     <ion-card>
         <ion-card-header>
-         <h2>Log-In</h2> 
+         <h2>Book</h2> 
         </ion-card-header>
         
-        <ion-card-content> 
-          <ion-list>
+        <!-- <ion-card-content >  -->
+   
+           
+             
           <ion-item>
             <ion-label ><ion-icon name="mail" class="i"></ion-icon>Name</ion-label>
             <ion-input type="text" [(ngModel)] = "name" ></ion-input>
           </ion-item>
-        
-          <ion-item>
+
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <div> <ion-item  class="tem1">
+                      <ion-label>Check-In</ion-label>
+                      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkIn"></ion-datetime>
+                    </ion-item></div>
+                </ion-col>
+                <ion-col>
+                  <div>  <ion-item  class="tem1">
+                      <ion-label>Check-Out</ion-label>
+                      <ion-datetime  displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkOut"></ion-datetime>
+                    </ion-item></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+
+
+          <!-- <ion-item>
             <ion-label ><ion-icon name="lock" class="i"></ion-icon>Adults:</ion-label>
             <ion-input type="text" [(ngModel)] = "adults" ></ion-input>
-          </ion-item>
+          </ion-item> -->
      
+         <!-- <ion-grid>
+           <ion-row>
+              <ion-col>
+                
+           <div><ion-item  class="tem1">
+              <ion-label>Check-In</ion-label>
+              <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkIn"></ion-datetime>
+            </ion-item> </div>
          
-            <ion-item>
-              <ion-label>Start Time</ion-label>
-              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)] = "checkIn"></ion-datetime>
+          </ion-col>
+        </ion-row>
+            <ion-row>
+                <ion-col>
+                  <div>
+            <ion-item  class="tem1">
+              <ion-label>Check-Out</ion-label>
+              <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkOut"></ion-datetime>
             </ion-item>
-        
-            <ion-item>
-              <ion-label>Start Time</ion-label>
-              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)] = "checkOut"></ion-datetime>
-            </ion-item>
-      
-          <ion-item>
+          </div>
+          </ion-col>
+          </ion-row>
+        </ion-grid> -->
+
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <div> <ion-item class="wrap">
+                <ion-label>Room type</ion-label>
+                 <ion-select [(ngModel)] = "rooms">
+                    <ion-option value="standard">Standard</ion-option>
+                    <ion-option value="luxury">Luxury</ion-option>
+                    <ion-option value="deluxe">Deluxe</ion-option>
+                    <ion-option value="magnicifent">Magnicifent</ion-option>
+                </ion-select>
+          </ion-item>
+        </div>
+      </ion-col>
+      <ion-col>
+          <div>  <ion-item class="wrap">
+              <ion-label>Adults</ion-label>
+               <ion-select [(ngModel)] = "adults">
+                  <ion-option value="1">1</ion-option>
+                  <ion-option value="2">2</ion-option>
+                  <ion-option value="3">3</ion-option>
+                  <ion-option value="4">4</ion-option>
+              </ion-select>
+        </ion-item></div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<ion-item class="wrap">
+    <ion-label>Children</ion-label>
+        <ion-select  [(ngModel)] = "children">
+            <ion-option value="0">0</ion-option>
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+          </ion-select>     
+    </ion-item>
+          <!-- <ion-item>
             <ion-label ><ion-icon name="mail" class="i"></ion-icon>Children:</ion-label>
             <ion-input type="text" [(ngModel)] = "children" ></ion-input>
           </ion-item>
@@ -62,20 +142,20 @@
           <ion-item>
             <ion-label ><ion-icon name="lock" class="i"></ion-icon>Rooms:</ion-label>
             <ion-input type="text" [(ngModel)] = "rooms"></ion-input>
-          </ion-item>
+          </ion-item> -->
        
         
         <div class="butt">
-         <button ion-button clear color = "color2" (click) = "Add()" >Book</button>
+         <button ion-button clear color = "color2" (click) = "Add()" class="animated slideInUp delay-3s">Book</button>
         </div>
         <br>
-          </ion-list>
-        </ion-card-content>
+       
+        <!-- </ion-card-content> -->
         </ion-card>
 
        <br>
 
-       <ion-card *ngFor = "let P of itemList;let i = index">
+       <!-- <ion-card *ngFor = "let P of itemList;let i = index">
           <ion-card-content>
             <h1>Name{{P.item1}}</h1>
             <h1>checkIn{{P.item2}}</h1>
@@ -84,6 +164,33 @@
             <h1>children{{P.item5}}</h1>
             <h1>rooms{{P.item6}}</h1>
           </ion-card-content>
-        </ion-card>
-        
+        </ion-card> -->
+
+        <!-- <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div> <ion-item >
+                    <ion-label>Check-In</ion-label>
+                    <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkIn"></ion-datetime>
+                  </ion-item></div>
+              </ion-col>
+              <ion-col>
+                <div>  <ion-item>
+                    <ion-label>Check-Out</ion-label>
+                    <ion-datetime  displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)] = "checkOut"></ion-datetime>
+                  </ion-item></div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div>1 of 3</div>
+              </ion-col>
+              <ion-col>
+                <div>2 of 3</div>
+              </ion-col>
+              <ion-col>
+                <div>3 of 3</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid> -->
 </ion-content>

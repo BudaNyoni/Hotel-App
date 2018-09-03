@@ -38,29 +38,29 @@
 
       <ion-item>
         <ion-label ><ion-icon name="person" class="i"></ion-icon>Name:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]= 'users.name'></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label ><ion-icon name="person" class="i"></ion-icon>Surname:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text"  [(ngModel)] = "users.surname"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label ><ion-icon name="mail" class="i"></ion-icon>E-mail:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text"  [(ngModel)] = "users.email"></ion-input>
       </ion-item>
     
       <ion-item>
         <ion-label ><ion-icon name="lock" class="i"></ion-icon>Password:</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password"  [(ngModel)] = "users.password"></ion-input>
       </ion-item>
 
     </ion-list>
     
     
     <div class="butt">
-     <button ion-button  color = "color2" (click) = "NextPage()" >SignUp</button>
+     <button ion-button  color = "color2" (click) = "SignUp(users)" >SignUp</button>
     </div>
     <br>
     
