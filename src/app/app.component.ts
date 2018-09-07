@@ -2,13 +2,17 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {  WelcomePage } from "../pages/welcome/welcome";
 import { HomePage } from '../pages/home/home';
+
+declare var firebase;
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+//  public rootPage:any ;
+rootPage = HomePage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -17,6 +21,15 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
-  }
+  //   var user = firebase.auth().currentUser;
+  //   if(user){
+  //     console.log(user);
+  //     this.rootPage = WelcomePage;
+  //   }
+  //     else{
+  // this.rootPage = HomePage;
+  //   }
+  // }
+}
 }
 

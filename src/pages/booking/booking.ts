@@ -30,7 +30,8 @@ children;
 rooms
  constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-     firebase.database().ref('bookingList').on('value',(data:any)=>{
+var users = firebase.auth().currentUser;
+     firebase.database().ref('bookingList' ).on('value',(data:any)=>{
  
    var name = data.val();
    var checkIn = data.val();
@@ -101,7 +102,8 @@ console.log(this.itemList)
         console.log(err)
           }
 Addbookings(name,checkIn,checkOut,adults,children,rooms){
-  this.itemref$ = firebase.database().ref('bookingList').push({
+  // var users = firebase.auth().currentUser;
+  this.itemref$ = firebase.database().ref('bookingList' ).push({
     name:name,
     checkIn:checkIn,
     checkOut:checkOut,

@@ -22,7 +22,7 @@ secomndPage = SecondPage;
 
 
   constructor(public navCtrl: NavController,public alertCtrl:AlertController,public toastCtrl:ToastController) {
-    var user = firebase.auth().currentUser;
+  
   }
 
 
@@ -31,9 +31,9 @@ ionViewDidLoad(){
   setTimeout(()=> this.splash = false , 3000);
 }
 
-signin(){
-  this.navCtrl.push(WelcomePage)
-}
+// signin(){
+//   this.navCtrl.push(WelcomePage)
+// }
 
 confirmPage(){
   this.navCtrl.push(ConfirmPage)
@@ -48,7 +48,7 @@ const alert = this.alertCtrl.create({
 });
 alert.present();
 console.log(user)
-// this.navCtrl.push(WelcomePage);
+this.navCtrl.push(WelcomePage);
 
 },
 (error)=>{

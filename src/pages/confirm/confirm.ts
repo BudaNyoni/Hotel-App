@@ -32,7 +32,8 @@ user = {} as Users;
 // children=this.itemList[this.obj].children;
 // rooms=this.itemList[this.obj].rooms;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    firebase.database().ref('bookingList' ).on('value',(data:any)=>{
+    var users = firebase.auth().currentUser;
+    firebase.database().ref('bookingList/' + users.uid ).on('value',(data:any)=>{
       var name = data.val();
       var checkIn = data.val();
       var checkOut = data.val();
@@ -42,11 +43,11 @@ user = {} as Users;
       // var email = data.val();
    
      var keys = Object.keys(name);
-     var keys = Object.keys(checkIn);
-     var keys = Object.keys(checkOut);
-     var keys = Object.keys(adults);
-     var keys = Object.keys(children);
-     var keys = Object.keys(rooms);
+    //  var keys = Object.keys(checkIn);
+    //  var keys = Object.keys(checkOut);
+    //  var keys = Object.keys(adults);
+    //  var keys = Object.keys(children);
+    //  var keys = Object.keys(rooms);
     //  var key = Object.keys(email)
    
      for(var i = 0; i < keys.length; i++){
